@@ -15,7 +15,6 @@ function customParser(userData: Record<string, unknown>, logic: string) {
 export function preProcessVariables(userData: Record<string, unknown>, content: Record<string, any>, logic: string) {
     let ud = customParser(userData, logic);
 
-    console.log(ud)
     for (const key in content) {
         if (typeof content[key] === 'object') {
           for (const subKey in content[key]) {
